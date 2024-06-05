@@ -1,0 +1,23 @@
+.banner-container {
+    display: inline-block;
+    max-width: fit-content;
+    margin-left: 50px;
+}
+
+.banner {
+    display: flex;
+    max-width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    margin-left: 200px;
+}
+
+.banner-breathe {
+    font-size: 10em;
+    /* Adjust font size for the title */
+    margin-bottom: 10px;
+    /* Add space between title and paragraph */
+}
