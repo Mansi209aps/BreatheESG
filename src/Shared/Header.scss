@@ -1,0 +1,22 @@
+.header {
+    flex-direction: column;
+}
+
+.upper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    display: flex;
+}
+
+.lower {
+    display: flex;
+    margin: 10px;
+}

@@ -1,0 +1,11 @@
+.dashboard {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: fit-content;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 10px;
+}
