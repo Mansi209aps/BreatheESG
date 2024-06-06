@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './Login.scss';
-import Banner from '../Shared/Banner';
+import { Button, Form, Input } from 'antd';
 
-import { Button, Form, Input, InputNumber } from 'antd';
-import { LockOutlined, UserOutlined } from '@ant-design/icons'
-import FormItem from 'antd/es/form/FormItem';
+import Banner from '../Shared/Banner';
 import earth from '../Images/Earth.png';
+
+import './Login.scss';
 
 function Login() {
     return (
@@ -29,11 +28,10 @@ function Login() {
                                     required: true,
                                 },
                             ]}
-                            labelCol={{ span: 24 }} // Set label to span across all columns
+                            labelCol={{ span: 24 }}
                         >
                             <Input placeholder='Your Email ID' />
                         </Form.Item>
-                        {/* <Input size="large" placeholder="Your Email ID" /> */}
 
                         <Form.Item
                             name="password"
@@ -44,7 +42,7 @@ function Login() {
                                     message: 'Please input your password!',
                                 },
                             ]}
-                            labelCol={{ span: 24 }} // Set label to span across all columns
+                            labelCol={{ span: 24 }}
                         >
                             <Input
                                 type="password"

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './Dataentry.scss';
-import Dashboard from '../Shared/Dashboard';
-import Header from '../Shared/Header';
-import { Divider, Radio, Table, Space, Tag, Result } from 'antd';
+import { Table, Tag } from 'antd';
 import { ShareAltOutlined, DeleteOutlined } from '@ant-design/icons';
+
+import Dashboard from '../Shared/Dashboard';
+
+import './Dataentry.scss';
+
 
 const columns = [
     {
@@ -34,7 +36,7 @@ const columns = [
         render: (_, { status }) => (
             <>
                 {status.map((status) => {
-                    let color = status.length == 7 ? 'red' : 'green';
+                    let color = status.length === 7 ? 'red' : 'green';
 
                     return (
                         <Tag color={color} key={status}>
@@ -140,7 +142,7 @@ const rowSelection = {
     },
     getCheckboxProps: (record) => ({
         disabled: record.name === 'Disabled User',
-        // Column configuration not to be checked
+
         name: record.name,
     }),
 };

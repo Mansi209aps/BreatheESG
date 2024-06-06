@@ -1,13 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { Button, Dropdown, message, Space, Avatar } from 'antd';
+import { DownOutlined, UserOutlined } from '@ant-design/icons';
+
 import './Header.scss';
 
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, Avatar } from 'antd';
-
-// const handleButtonClick = (e) => {
-//     message.info('Click on left button.');
-//     console.log('click left button', e);
-// };
 const handleMenuClick = (e) => {
     message.info('Click on menu item.');
     console.log('click', e);

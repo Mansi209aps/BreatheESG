@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Dashboard.scss';
+import { Button, Dropdown, message, Space, Avatar } from 'antd';
 import {
     DownOutlined, UserOutlined, SignalFilled, AppstoreOutlined, FileOutlined, DatabaseOutlined,
     CopyOutlined, RiseOutlined, CheckCircleOutlined, AimOutlined, LogoutOutlined,
-    BuildOutlined, BellOutlined, GlobalOutlined, MenuOutlined, CloseOutlined, LeftCircleOutlined, RightCircleOutlined
+    BuildOutlined, BellOutlined, GlobalOutlined, LeftCircleFilled, RightCircleFilled
 } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, Avatar } from 'antd';
+
+import logo from '../Images/logo.png';
+
+import './Dashboard.scss';
+
 
 const handleMenuClick = (e) => {
     message.info('Click on menu item.');
-    console.log('click', e);
 };
 
 const items = [
@@ -52,31 +55,30 @@ function Dashboard() {
     };
 
     return (
-        <div className='bars'>
+        <div className={`bars ${isDashboardOpen ? 'open' : 'closed'}`}>
             <Button className='menu-toggle' onClick={toggleDashboard}>
-                {isDashboardOpen ? <LeftCircleOutlined /> : <RightCircleOutlined />}
+                {isDashboardOpen ? <LeftCircleFilled /> : <RightCircleFilled />}
             </Button>
 
-            {isDashboardOpen && (
-                <div className='dashboard'>
-                    <h4>BREATHE ESG</h4>
-                    <div>
-                        <p><SignalFilled /> Dashboard</p>
-                        <p><AppstoreOutlined /> Entity Manager</p>
-                        <p><DatabaseOutlined /> Data Manager</p>
-                        <p><FileOutlined /> Reporting</p>
-                        <p><CopyOutlined /> Materiality</p>
-                        <p><CheckCircleOutlined /> Suppliers</p>
-                        <p><RiseOutlined /> Analytics</p>
-                        <p><AimOutlined /> Targets</p>
-                        <p><LogoutOutlined /> Logout</p>
-                    </div>
+            <div className={`dashboard ${isDashboardOpen ? 'open' : 'closed'}`}>
+                <h4><img src={logo} alt="LOGO" className='logo' /> BREATHE ESG</h4>
+                <div>
+                    <p><SignalFilled /> Dashboard</p>
+                    <p><AppstoreOutlined /> Entity Manager</p>
+                    <p><DatabaseOutlined /> Data Manager</p>
+                    <p><FileOutlined /> Reporting</p>
+                    <p><CopyOutlined /> Materiality</p>
+                    <p><CheckCircleOutlined /> Suppliers</p>
+                    <p><RiseOutlined /> Analytics</p>
+                    <p><AimOutlined /> Targets</p>
+                    <div className='logout'><p><LogoutOutlined /> Logout</p></div>
                 </div>
-            )}
+            </div>
 
             <div className='header'>
                 <div className='upper'>
                     <div className='left'>
+                        <img src={logo} alt="LOGO" className='logo' />
                         <div>View Name</div>
                         <Dropdown menu={menuProps}>
                             <Button>
@@ -106,7 +108,7 @@ function Dashboard() {
                         <Link to='/tracker' className='nav-link'><AimOutlined /> TRACKER</Link>
                     </div>
 
-                    <div className='right'>
+                    <div className='approval-buttons'>
                         <div>
                             For:
                             <Dropdown menu={menuProps}>

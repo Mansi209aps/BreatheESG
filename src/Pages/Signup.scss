@@ -4,9 +4,6 @@
     display: flex;
 }
 
-// .form-item-label {
-//     color: white;
-// }
 .earth {
     width: 100px;
     margin: 0 auto;
@@ -31,11 +28,11 @@
 // Responsive styles
 @media screen and (max-width: 768px) {
     .form-container {
-        order: 2; // Change the order of the form container
+        order: 2;
     }
 
     .earth {
-        order: 1; // Change the order of the image
+        order: 1;
     }
 
     .Signup {
@@ -58,6 +55,6 @@
 
 @media screen and (max-width: 576px) {
     .form-container {
-        margin-top: 20px; // Add some space above the form container on small screens
+        margin-top: 20px;
     }
 }

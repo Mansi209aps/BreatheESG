@@ -13,18 +13,46 @@
     width: 200px;
     max-width: fit-content;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(0);
+
+    &.closed {
+        transform: translateX(-200px);
+    }
 }
 
 .bars {
     display: flex;
+    transition: margin-left 0.3s ease-in-out;
+
+    &.closed {
+        margin-left: 0;
+    }
+
+    &.open {
+        margin-left: 100px;
+    }
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+}
+
+.logout {
+    color: red;
 }
 
 .header {
-    margin-left: 200px;
+    flex: 1;
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 100px;
     width: calc(100% - 200px);
     display: flex;
     flex-direction: column;
+
+    .closed & {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 .upper {
@@ -46,15 +74,21 @@
 .lower {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: 10px;
 
     div {
-        margin-right: 4px;
+        margin-right: 2px;
     }
 
     .button-group {
         display: flex;
         align-items: center;
     }
+}
+
+.approval-buttons {
+    display: flex;
 }
 
 .nav-link {
@@ -89,24 +123,17 @@
     top: 20px;
     left: 20px;
     z-index: 1000;
-    background-color: green;
-    color: white;
+    color: black;
     border: none;
     padding: 10px;
     cursor: pointer;
 
     &:hover,
     &:focus {
-        background-color: darkgreen;
-        color: white;
+        color: black;
     }
 }
 
-.closed {
-    transform: translateX(-200px);
-}
-
-// Responsive styles
 @media screen and (max-width: 768px) {
     .header {
         margin-left: 0;

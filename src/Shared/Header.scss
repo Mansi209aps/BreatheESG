@@ -5,7 +5,7 @@
 
 .upper {
     display: flex;
-    justify-content: space-between; // Ensure left and right are spread out
+    justify-content: space-between;
     margin: 10px;
 }
 
@@ -15,35 +15,10 @@
 
 .right {
     display: flex;
-    margin-left: auto; // This pushes the .right section to the far right
+    margin-left: auto;
 }
 
 .lower {
     display: flex;
     margin: 10px;
 }
-
-
-
-// .header {
-//     flex-direction: column;
-// }
-
-// .upper {
-//     display: flex;
-//     justify-content: flex-end;
-//     margin: 10px;
-// }
-
-// .left {
-//     display: flex;
-// }
-
-// .right {
-//     display: flex;
-// }
-
-// .lower {
-//     display: flex;
-//     margin: 10px;
-// }

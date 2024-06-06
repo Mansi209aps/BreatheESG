@@ -1,8 +1,10 @@
 import React from 'react';
-import './Tracker.scss';
-import Dashboard from '../Shared/Dashboard';
 import { Table, Tag } from 'antd';
-import { ArrowDownOutlined, PercentageOutlined, FilterFilled } from '@ant-design/icons';
+import { ArrowDownOutlined, PercentageOutlined, FilterFilled, PieChartOutlined, SolutionOutlined } from '@ant-design/icons';
+
+import Dashboard from '../Shared/Dashboard';
+
+import './Tracker.scss';
 
 const columns = [
     {
@@ -88,11 +90,11 @@ function Tracker() {
             <Dashboard />
             <div className='head'>
                 <div>
-                    <p>PENDING TRACKERS</p>
+                    <p>PENDING TRACKERS <PieChartOutlined /></p>
                     <h2>45/60</h2>
                 </div>
                 <div>
-                    <p>PENDING REVIEWS</p>
+                    <p>PENDING REVIEWS <SolutionOutlined /></p>
                     <h2>3</h2>
                 </div>
             </div>
