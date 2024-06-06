@@ -1,6 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Form, Input } from 'antd';
+import { GoogleOutlined, TwitterOutlined } from '@ant-design/icons';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from './Firebase/firebaseConfig';
 
 import Banner from '../Shared/Banner';
 import earth from '../Images/Earth.png';
@@ -8,6 +11,17 @@ import earth from '../Images/Earth.png';
 import './Login.scss';
 
 function Login() {
+    const navigate = useNavigate();
+
+    const handleGoogle = async () => {
+        const provider = new GoogleAuthProvider();
+        try {
+            await signInWithPopup(auth, provider);
+            navigate('/dataentry');  // Redirect to /dataentry on successful login
+        } catch (error) {
+            console.error("Error during Google login:", error);
+        }
+    };
     return (
         <div className='Login'>
             <Banner />
@@ -49,6 +63,10 @@ function Login() {
                                 placeholder="Password"
                             />
                         </Form.Item>
+                        <di className="auth">
+                            <Button className="ggl-button" onClick={handleGoogle} block size='medium'><GoogleOutlined /> Sign up with Google</Button>
+                            {/* <Button className="ggl-button" block size='medium'><TwitterOutlined /> Sign up with Twitter</Button> */}
+                        </di>
                         <p className='trouble'>Having trouble logging in? <Link to='/' className='link'>Contact Us</Link></p>
                         <Button className="button" block size='large'>Continue</Button>
                     </div>
