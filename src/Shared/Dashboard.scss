@@ -4,8 +4,81 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: fit-content;
-    height: 100vh;
+    position: fixed; // Fix the position of the dashboard
+    left: 0; // Align it to the left
+    top: 0; // Align it to the top
+    height: 100vh; // Full height of the viewport
     padding-left: 20px;
     padding-right: 10px;
+    width: 200px; // Set a fixed width for the dashboard
+    max-width: fit-content;
+}
+
+.bars {
+    display: flex;
+}
+
+.header {
+    margin-left: 190px; // Provide space for the fixed dashboard
+    width: calc(100% - 200px); // Adjust width to account for the dashboard width
+    display: flex;
+    flex-direction: column;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+    .left,
+    .right {
+        display: flex;
+        align-items: center;
+
+        >* {
+            margin-right: 15px; // Add margin to child elements for spacing
+        }
+    }
+}
+
+.lower {
+    display: flex;
+    align-items: center;
+
+    div {
+        margin-right: 4px; // Add margin to div elements for spacing
+    }
+
+    .button-group {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-right: 20px;
+
+    &:hover {
+        color: green;
+    }
+
+    &:active {
+        color: green;
+    }
+}
+
+.submit {
+    background-color: green;
+    color: white;
+    border: none;
+
+    &:hover,
+    &:focus {
+        background-color: darkgreen;
+        color: white;
+    }
 }

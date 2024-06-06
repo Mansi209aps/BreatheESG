@@ -3,6 +3,7 @@ import './Dataentry.scss';
 import Dashboard from '../Shared/Dashboard';
 import Header from '../Shared/Header';
 import { Divider, Radio, Table, Space, Tag, Result } from 'antd';
+import { ShareAltOutlined, DeleteOutlined } from '@ant-design/icons';
 
 const columns = [
     {
@@ -24,21 +25,7 @@ const columns = [
     },
     {
         title: 'RISK CLASSIFICATION',
-        key: 'checked',
         dataIndex: 'risk',
-        render: (_, { risk }) => (
-            <>
-                {risk.map((risk) => {
-                    let color = risk.length == 7 ? 'red' : 'green';
-
-                    return (
-                        <Tag color={color} key={risk}>
-                            {risk.toUpperCase()}
-                        </Tag>
-                    );
-                })}
-            </>
-        ),
     },
     {
         title: 'STATUS',
@@ -63,6 +50,10 @@ const columns = [
         dataIndex: 'result',
         render: (text) => <a>{text}</a>,
     },
+    {
+        title: 'ACTIONS',
+        dataIndex: 'actions',
+    },
 ];
 const data = [
     {
@@ -71,9 +62,14 @@ const data = [
         type: 'BRSR',
         suppliers: 20,
         score: '-',
-        risk: ['Medium'],
+        risk: 'Medium',
         status: ['Pending'],
         result: '-',
+        actions:
+            <div>
+                <ShareAltOutlined style={{ marginRight: '12px' }} />
+                <DeleteOutlined />
+            </div>
     },
     {
         key: '2',
@@ -81,9 +77,14 @@ const data = [
         type: 'BRSR',
         suppliers: 25,
         score: 98,
-        risk: ['Low'],
+        risk: 'Low',
         status: ['Complete'],
         result: 'View',
+        actions:
+            <div>
+                <ShareAltOutlined style={{ marginRight: '12px' }} />
+                <DeleteOutlined />
+            </div>,
     },
     {
         key: '3',
@@ -91,9 +92,14 @@ const data = [
         type: 'BRSR',
         suppliers: 35,
         score: 22,
-        risk: ['High'],
+        risk: 'High',
         status: ['Complete'],
         result: 'View',
+        actions:
+            <div>
+                <ShareAltOutlined style={{ marginRight: '12px' }} />
+                <DeleteOutlined />
+            </div>,
     },
     {
         key: '4',
@@ -101,9 +107,14 @@ const data = [
         type: 'Custom',
         suppliers: 49,
         score: 23,
-        risk: ['Medium'],
+        risk: 'Medium',
         status: ['Complete'],
         result: 'View',
+        actions:
+            <div>
+                <ShareAltOutlined style={{ marginRight: '12px' }} />
+                <DeleteOutlined />
+            </div>,
     },
     {
         key: '4',
@@ -111,9 +122,14 @@ const data = [
         type: 'Custom',
         suppliers: 100,
         score: 42,
-        risk: ['Medium'],
+        risk: 'Medium',
         status: ['Complete'],
-        result: 'View'
+        result: 'View',
+        actions:
+            <div>
+                <ShareAltOutlined style={{ marginRight: '12px' }} />
+                <DeleteOutlined />
+            </div>,
     },
 ];
 
@@ -135,8 +151,6 @@ function DataEntry() {
         <div className='dataentry'>
             <Dashboard />
             <div>
-
-                <Header />
 
                 <div className='table'>
                     <Table

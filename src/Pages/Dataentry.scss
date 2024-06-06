@@ -1,7 +1,5 @@
-.dataentry {
-    display: flex;
-}
-
 .table {
-    width: 100vh;
+    margin-left: 200px; // Provide space for the fixed dashboard
+    width: calc(100% - 200px); // Adjust width to account for the dashboard width
+    padding: 20px; // Add padding for better appearance
 }

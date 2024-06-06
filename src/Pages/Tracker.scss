@@ -1,3 +1,16 @@
-.tracker {
+.head {
     display: flex;
+    margin-left: 190px; // Provide space for the fixed dashboard
+    width: calc(100% - 200px); // Adjust width to account for the dashboard width
+    padding: 10px; // Add padding for better appearance
+
+    >div {
+        margin-right: 40px; // Add space between child divs
+    }
+}
+
+.table {
+    margin-left: 140px; // Provide space for the fixed dashboard
+    width: calc(100% - 200px); // Adjust width to account for the dashboard width
+    padding: 20px; // Add padding for better appearance
 }
