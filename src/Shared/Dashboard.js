@@ -1,17 +1,18 @@
-import React from 'react'
-import './Dashboard.scss';
-import { DownOutlined, UserOutlined, SignalFilled, AppstoreOutlined, FileOutlined, DatabaseOutlined, CopyOutlined, RiseOutlined, CheckCircleOutlined, AimOutlined, LogoutOutlined, BuildOutlined, BellOutlined, GlobalOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, Avatar } from 'antd';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Dashboard.scss';
+import {
+    DownOutlined, UserOutlined, SignalFilled, AppstoreOutlined, FileOutlined, DatabaseOutlined,
+    CopyOutlined, RiseOutlined, CheckCircleOutlined, AimOutlined, LogoutOutlined,
+    BuildOutlined, BellOutlined, GlobalOutlined, MenuOutlined, CloseOutlined, LeftCircleOutlined, RightCircleOutlined
+} from '@ant-design/icons';
+import { Button, Dropdown, message, Space, Avatar } from 'antd';
 
-// const handleButtonClick = (e) => {
-//     message.info('Click on left button.');
-//     console.log('click left button', e);
-// };
 const handleMenuClick = (e) => {
     message.info('Click on menu item.');
     console.log('click', e);
 };
+
 const items = [
     {
         label: '1st menu item',
@@ -30,38 +31,48 @@ const items = [
         danger: true,
     },
     {
-        label: '4rd menu item',
+        label: '4th menu item',
         key: '4',
         icon: <UserOutlined />,
         danger: true,
         disabled: true,
     },
 ];
+
 const menuProps = {
     items,
     onClick: handleMenuClick,
 };
 
 function Dashboard() {
+    const [isDashboardOpen, setIsDashboardOpen] = useState(true);
+
+    const toggleDashboard = () => {
+        setIsDashboardOpen(!isDashboardOpen);
+    };
+
     return (
         <div className='bars'>
+            <Button className='menu-toggle' onClick={toggleDashboard}>
+                {isDashboardOpen ? <LeftCircleOutlined /> : <RightCircleOutlined />}
+            </Button>
 
-            <div className='dashboard'>
-                <h4>BREATHE ESG</h4>
-                <div>
-                    <p><SignalFilled /> Dashboard</p>
-                    <p><AppstoreOutlined /> Entity Manager</p>
-                    <p><DatabaseOutlined /> Data Manager</p>
-                    <p><FileOutlined /> Reporting</p>
-                    <p><CopyOutlined /> Materiality</p>
-                    <p><CheckCircleOutlined /> Suppliers</p>
-                    <p><RiseOutlined /> Analytics</p>
-                    <p><AimOutlined /> Targets</p>
-                    <p><LogoutOutlined /> Logout</p>
+            {isDashboardOpen && (
+                <div className='dashboard'>
+                    <h4>BREATHE ESG</h4>
+                    <div>
+                        <p><SignalFilled /> Dashboard</p>
+                        <p><AppstoreOutlined /> Entity Manager</p>
+                        <p><DatabaseOutlined /> Data Manager</p>
+                        <p><FileOutlined /> Reporting</p>
+                        <p><CopyOutlined /> Materiality</p>
+                        <p><CheckCircleOutlined /> Suppliers</p>
+                        <p><RiseOutlined /> Analytics</p>
+                        <p><AimOutlined /> Targets</p>
+                        <p><LogoutOutlined /> Logout</p>
+                    </div>
                 </div>
-            </div>
-
-
+            )}
 
             <div className='header'>
                 <div className='upper'>
@@ -119,7 +130,7 @@ function Dashboard() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Dashboard
+export default Dashboard;

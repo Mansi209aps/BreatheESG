@@ -1,9 +1,3 @@
-.banner-container {
-    display: inline-block;
-    max-width: fit-content;
-    margin-left: 50px;
-}
-
 .banner {
     display: flex;
     max-width: fit-content;
@@ -15,9 +9,25 @@
     margin-left: 200px;
 }
 
+.logo {
+    height: 40px;
+    /* This will ensure the logo maintains its aspect ratio */
+    width: 40px;
+    /* Adjust the width as needed */
+}
+
 .banner-breathe {
-    font-size: 10em;
-    /* Adjust font size for the title */
+    font-size: 2em;
+    /* Adjust the font size for the title */
     margin-bottom: 10px;
     /* Add space between title and paragraph */
+}
+
+.link {
+    color: rgb(40, 193, 40);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
 }

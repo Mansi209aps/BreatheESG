@@ -4,21 +4,64 @@
     display: flex;
 }
 
-// .form-item-label {
-//     color: white;
-// }
+.form-container {
+    margin: 20px auto;
+}
+
 .form {
     background-color: rgb(12, 97, 57);
     color: white;
     border-radius: 10px;
-    margin: 20px auto;
     padding: 30px;
+}
+
+.earth {
+    width: 100px;
+    margin: 0 auto;
 }
 
 .trouble {
     text-align: center;
 }
 
+.link {
+    color: rgb(40, 193, 40);
+}
+
 .button {
     background-color: green;
+}
+
+// Responsive styles
+@media screen and (max-width: 768px) {
+    .form-container {
+        order: 2; // Change the order of the form container
+    }
+
+    .earth {
+        order: 1; // Change the order of the image
+    }
+
+    .Login {
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .form {
+        background-color: rgb(12, 97, 57);
+        color: white;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form-container {
+        margin-top: 20px; // Add some space above the form container on small screens
+    }
 }
