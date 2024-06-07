@@ -4,20 +4,24 @@
     display: flex;
 }
 
-.form-container {
-    margin: 20px auto;
-}
-
-.form {
+.Login .form {
     background-color: rgb(12, 97, 57);
     color: white;
     border-radius: 10px;
     padding: 30px;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+}
+
+
+.form-container {
+    margin: 20px auto;
 }
 
 .earth {
-    width: 100px;
-    margin: 0 auto;
+    width: 120px;
+    margin: 0 auto 20px;
+    display: block;
 }
 
 .trouble {
@@ -53,6 +57,7 @@
         color: white;
         border-radius: 10px;
         padding: 30px;
+        margin-top: 0px;
     }
 
     .button {
