@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# BREATHE ESG Frontend Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is the frontend assignment for BREATHE ESG. The main objectives were to create a user interface based on the provided Figma design, implement Google authentication using Firebase, and deploy the application on Vercel.
 
-In the project directory, you can run:
+![image](https://github.com/Mansi209aps/BreatheESG/assets/78530251/bcc79d87-ca55-464f-a496-ee184cdc97f6)
 
-### `npm start`
+![image](https://github.com/Mansi209aps/BreatheESG/assets/78530251/7e1473ee-5b97-4711-a425-b9a25fd72b67)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## You can view the deployed project here: <a href="https://breathe-esg-assignment-beta.vercel.app/">BREATHE ESG Assignment</a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Responsive UI**: The user interface is designed to be fully responsive, adapting to various screen sizes and devices.
+- **Google Authentication**: Users can sign in using their Google accounts via Firebase authentication.
+- **Deployment**: The project is deployed on Vercel for easy access and demonstration.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: For building the user interface.
+- **Firebase**: For implementing Google authentication.
+- **Vercel**: For deployment.
+- **SCSS**: For styling.
+- **Ant Design**: For components and icons.
+- **Figma**: For the design reference.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Firebase Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+2. Enable Google authentication in the Firebase Authentication section.
+3. Create a `.env` file in the root of your project and add your Firebase configuration:
+   ```plaintext
+   REACT_APP_APIKEY=your-api-key
+   REACT_APP_AUTHDOMAIN=your-auth-domain
+   REACT_APP_PROJECTID=your-project-id
+   REACT_APP_STORAGEBUCKET=your-storage-bucket
+   REACT_APP_MESSAGINGSENDERID=your-messaging-sender-id
+   REACT_APP_APPID=your-app-id
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the Project
 
-### `npm run eject`
+To start the development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application will be available at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Open the application in your browser.
+2. Click on the "Sign in with Google" button.
+3. Authenticate using your Google account.
+4. Once authenticated, you will be redirected to the Data entry page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Credits
 
-## Learn More
+- Design provided by BREATHE ESG.
+- Developed by Mansi.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to contact me at [mansisharma209aps@gmail.com](mailto:mansisharma209aps@gmail.com) for any questions or feedback.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for reviewing my assignment!
